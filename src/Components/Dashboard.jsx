@@ -1,7 +1,9 @@
 import React from 'react'
 import Tile from './Tile';
 import { Button, Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 function Dashboard({data,setData}) {
+
     const dataDashboard = [
         {
             isProgress: false,
@@ -34,6 +36,7 @@ function Dashboard({data,setData}) {
         arrayVal.splice(index,1);
         setData(arrayVal);
     }
+    const navigate=useNavigate();
     return (
         <>
             <div className="container-fluid">
@@ -78,7 +81,9 @@ function Dashboard({data,setData}) {
                                         <td>{e.mobile}</td>
                                         <td>{e.batch}</td>
                                         <td>
-                                            <Button className='btn' variant='primary'>Edit</Button>
+                                            <Button className='btn' variant='primary'
+                                            onClick={()=>navigate(`/edit/${i}`)}
+                                            >Edit</Button>
                                             &nbsp;
                                             &nbsp;
                                             <Button variant='danger' onClick={()=>handledelete(i)}>Delete</Button>

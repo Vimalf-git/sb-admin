@@ -43,6 +43,30 @@ function Sidebar() {
                         </Link>
                     </div>
                 </li>
+
+                <div className="sidebar-heading">
+                    NestedRoutes
+                </div>
+                <li className="nav-item">
+                    <div className="nav-link">
+                        <Link to={'nested-example'} style={{textDecoration: 'none'}}>
+                            <i className="fas fa-fw fa-wrench"></i>
+                            <span style={{ color: 'white' }}>Nested-Example</span>
+                        </Link>
+                    </div>
+                </li>
+
+                <div className="sidebar-heading">
+                    Hooks
+                </div>
+                <li className="nav-item">
+                    <div className="nav-link">
+                        <Link to={'useref'} style={{textDecoration: 'none'}}>
+                            <i className="fas fa-fw fa-wrench"></i>
+                            <span style={{ color: 'white' }}>UseRef</span>
+                        </Link>
+                    </div>
+                </li>
             </ul>
         </>
     )
